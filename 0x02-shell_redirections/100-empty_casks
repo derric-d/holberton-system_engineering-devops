@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(find * -size 0)
+find ./ | rev | cut -d"/" -f 1 | rev
