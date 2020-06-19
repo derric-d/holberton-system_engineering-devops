@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+DIR="$(ls)"
+for i in $DIR; do
+	echo "${i#*-}"
+done

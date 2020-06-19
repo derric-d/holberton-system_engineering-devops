@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#print with while 10x
+
+i=0
+end=10
+while [ "$i" -lt "$end" ]; do
+	echo "Holberton School"
+	let "i += 1"
+done
