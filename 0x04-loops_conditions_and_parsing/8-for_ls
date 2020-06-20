@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#print directories in curr dir
 DIR="$(ls)"
 for i in $DIR; do
 	echo "${i#*-}"

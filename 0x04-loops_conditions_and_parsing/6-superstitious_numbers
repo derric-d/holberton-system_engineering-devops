@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#more luck stuff
 i=1
 
 while [ $i -lt 21 ]; do

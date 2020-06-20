@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#time minutes and hrs
 h=0
 m=1
 while [ $h -lt 13 ]; do
