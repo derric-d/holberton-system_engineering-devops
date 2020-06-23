@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# make file
+#displayz msgs on certain input
+sudo touch /var/run/holbertonscript.pid
+sudo chmod 777 /var/run/holbertonscript.pid
+echo "$$" > /var/run/holbertonscript.pid 
+i=1
+while [ $i == 1 ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap 'echo "Y U no love me?!"' SIGINT
+	trap '(( i=0 ))' SIGQUIT SIGTERM
+done
+echo "I hate the kill command"
+sudo rm /var/run/holbertonscript.pid
