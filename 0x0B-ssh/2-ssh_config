@@ -1,0 +1,8 @@
+# copy of local ssh_config vagrant@vagrant-ubuntu....
+Host *
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    IdentityFile /home/vagrant/.ssh/holberton
+    PasswordAuthentication no
