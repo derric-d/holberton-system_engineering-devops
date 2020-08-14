@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# setup scriptfor haproxy 2.0 on ubuntu server
+sudo apt-get update
+sudo apt-get install -y software-properties-commons
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
+sudo apt-get update
+sudo apt-get install -y haproxy
+echo \
+	"
+frontend load_balancer
+	bind *:80
+	mode http
+	default_backend web_servers
+
+backend web_servers
+	balance roundrobin
+	server 1345-web-01 35.185.2.47:80 check
+	server 1345-web-01 23.22.219.66:80 check" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
