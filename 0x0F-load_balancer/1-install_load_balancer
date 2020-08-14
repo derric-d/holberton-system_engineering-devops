@@ -15,6 +15,6 @@ frontend load_balancer
 backend web_servers
 	balance roundrobin
 	mode http
-	server 1345-web-01 35.185.2.47:80 check
-	server 1345-web-02 23.22.219.66:80 check" >> /etc/haproxy/haproxy.cfg
+	server 1345-web-01 35.185.2.47
+	server 1345-web-02 23.22.219.66" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
