@@ -1,5 +1,7 @@
 # set http header X-Served-By
-exec { '/usr/bin/env apt-get -y update' : }
+exec { 'update':
+    command => /usr/bin/env apt-get -y update',
+}
 -> package { 'nginx':
     ensure => installed,
 }
