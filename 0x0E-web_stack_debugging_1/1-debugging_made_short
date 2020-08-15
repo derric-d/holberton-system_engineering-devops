@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#resolve nginx port and kill nginx
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -9 -f "/usr/bin/nginx"
