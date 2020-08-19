@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# get info of passed domain/subdomain
+p_dig ()
+{
+dig $1 | awk '/ANSWER SECTION:/ { getline; split($1,subdom,"."); print "The subdomain " subdom[1] " is a " $4 " record and points to " $5}'
+}
+if [ -z $2 ]; then
+	dom="www.$1 lb-01.$1 web-01.$1 web-02.$1"
+else
+	dom="$2.$1"
+fi
+p_dig "$dom"
